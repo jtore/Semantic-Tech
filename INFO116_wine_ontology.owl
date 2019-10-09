@@ -149,6 +149,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Abruzzo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Abruzzo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Italian_Region"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Acidity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Acidity">
@@ -162,6 +171,31 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alentejo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alentejo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Portugese_Region"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Setubal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Argentine_Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Argentine_Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Region"/>
     </owl:Class>
     
 
@@ -187,6 +221,14 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Bordeaux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Bordeaux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
     </owl:Class>
     
 
@@ -284,10 +326,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Navarra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Navarra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rioja"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Patagonia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Patagonia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Argentine_Region"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pork -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pork">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Portugese_Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Portugese_Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Region"/>
     </owl:Class>
     
 
@@ -315,6 +382,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rioja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rioja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rone_south -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rone_south">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Setubal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Setubal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Portugese_Region"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish">
@@ -327,6 +418,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Small_Game">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Region"/>
     </owl:Class>
     
 
@@ -369,6 +468,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Vegetables">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Italian_Region"/>
     </owl:Class>
     
 
@@ -538,6 +645,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Bordeaux"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Burgund"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rone_south"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Argentine_Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Italian_Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Portugese_Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
