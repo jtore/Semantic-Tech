@@ -58,7 +58,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasSweetness">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasWineProfile"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isSweetnessOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
     </owl:ObjectProperty>
     
@@ -146,7 +146,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isSweetnessOf">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isWineProfileOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
     </owl:ObjectProperty>
     
 
@@ -163,7 +162,9 @@
 
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isWineProfileOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isWineProfileOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isWineProfileOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine"/>
+    </owl:ObjectProperty>
     
 
 
@@ -263,15 +264,6 @@
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isOrganic -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isOrganic">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isSparkling -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isSparkling">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
@@ -416,6 +408,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sparkling_Wine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sparkling_Wine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Wine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasSweetness"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness">
@@ -545,13 +552,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasVintageYear"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isOrganic"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -559,9 +559,9 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isSparkling"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasVintageYear"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -604,6 +604,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Albino_Armani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Albino_Armani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Venezie"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alentejo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alentejo">
@@ -640,7 +649,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">399</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2014</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -689,7 +697,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">279.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -740,7 +747,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">229.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -762,9 +768,48 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Casa_Belfi_Colfòndo_Raboso_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Casa_Belfi_Colfòndo_Raboso_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sparkling_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Raboso"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Venezie"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Albino_Armani"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Small_Game"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.9</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Belfi Colfòndo Raboso 2016</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">199.90</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Casa_Vinicola_Marenco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Casa_Vinicola_Marenco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Piemonte"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Castelão -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Castelão"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Catalonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Catalonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region"/>
+        <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</isInCountry>
+    </owl:NamedIndividual>
     
 
 
@@ -772,6 +817,29 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cattle">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cecilia_Beretta_Recioto_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cecilia_Beretta_Recioto_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Chardonnay"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Garganega"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Semi"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pasqua"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cheese"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dessert"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.7</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cecilia Beretta Recioto 2010</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230.20</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2010</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
     </owl:NamedIndividual>
     
 
@@ -804,7 +872,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">256.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -833,6 +900,39 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#De_Stefani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#De_Stefani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#De_Stefani_Rosé_0.15_Millesimato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#De_Stefani_Rosé_0.15_Millesimato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sparkling_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Light_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Marzemino"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Raboso"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#De_Stefani"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Aperitif"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.8</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Stefani Rosé 0.15 Millesimato</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">214.00</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2017</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Desierto_de_Azul_y_Garanza_2016 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Desierto_de_Azul_y_Garanza_2016">
@@ -852,7 +952,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">449.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -891,6 +990,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Elyssia_Pinot_Noir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Elyssia_Pinot_Noir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sparkling_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pinot_Noir"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Catalonia"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Freixenet"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Aperitif"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elyssia Pinot Noir</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">226.90</hasPrice>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Engel_Renaissance_Pinot_Noir_2015 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Engel_Renaissance_Pinot_Noir_2015">
@@ -910,7 +1031,38 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">398.50</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2015</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Eric_Texier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Eric_Texier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rhône_North"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Eric_Texier_Brézème_Roussanne_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Eric_Texier_Brézème_Roussanne_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Roussanne"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rhône_North"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Eric_Texier"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric Texier Brézème Roussanne 2017</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">289.90</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2017</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
     </owl:NamedIndividual>
     
 
@@ -919,6 +1071,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Freixenet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Freixenet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Catalonia"/>
     </owl:NamedIndividual>
     
 
@@ -939,9 +1100,48 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Garganega -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Garganega">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Garnacha -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Garnacha"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Gewürztraminer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Gewürztraminer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Girardin_Meursault_Premier_Cru_Blagny_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Girardin_Meursault_Premier_Cru_Blagny_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Chardonnay"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Burgund"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Vincent_Girardin"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.8</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Girardin Meursault Premier Cru Blagny 2014</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">636.00</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2014</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
+    </owl:NamedIndividual>
     
 
 
@@ -965,7 +1165,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">549.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2012</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -975,6 +1174,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Giusti_Societa_Vitivinicola">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
         <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Glera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Glera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
     </owl:NamedIndividual>
     
 
@@ -1008,7 +1215,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">354.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -1048,6 +1254,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Jean-Marie_Reverdy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Jean-Marie_Reverdy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Loire"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Joao_Portugal_Ramos -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Joao_Portugal_Ramos">
@@ -1077,7 +1292,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">133.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2017</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -1110,7 +1324,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">269.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -1134,7 +1347,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">194.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -1151,6 +1363,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Light_Body">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Body"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Loire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Loire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
+        <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</isInCountry>
     </owl:NamedIndividual>
     
 
@@ -1190,7 +1411,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">539.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -1209,6 +1429,27 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Marcel_Lapierre">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
         <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Burgund"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Marenco_Asti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Marenco_Asti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sparkling_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#High_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moscato"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweet"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Piemonte"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Casa_Vinicola_Marenco"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Aperitif"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dessert"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marenco Asti</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">148.00</hasPrice>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
     </owl:NamedIndividual>
     
 
@@ -1243,7 +1484,14 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">215.00</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2015</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Marzemino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Marzemino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
     </owl:NamedIndividual>
     
 
@@ -1276,7 +1524,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">199.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
@@ -1321,9 +1568,83 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Molino_S.S.A. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Molino_S.S.A.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Piemonte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Molino_Sofia_Langhe_Chardonnay_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Molino_Sofia_Langhe_Chardonnay_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Low_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Chardonnay"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Piemonte"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Molino_S.S.A."/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Aperitif"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.1</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molino Sofia Langhe Chardonnay 2018</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">212.00</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moltès -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moltès">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moltès_Sagesse_Tradition_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moltès_Sagesse_Tradition_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Gewürztraminer"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pinot_Gris"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Riesling"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moltès"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cheese"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Vegetables"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.3</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moltès Sagesse Tradition 2018</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">148.10</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Montepulciano -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Montepulciano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moscato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moscato">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
     </owl:NamedIndividual>
     
@@ -1342,6 +1663,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Navarra">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Spanish_Region"/>
         <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</isInCountry>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pasqua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pasqua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
     </owl:NamedIndividual>
     
 
@@ -1376,7 +1706,23 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">402.90</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2015</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Piemonte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Piemonte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Italian_Region"/>
+        <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</isInCountry>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pinot_Gris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pinot_Gris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
     </owl:NamedIndividual>
     
 
@@ -1405,6 +1751,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Prosecco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Prosecco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Italian_Region"/>
+        <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</isInCountry>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Protheau_Mercurey_Les_Ormeaux_2016 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Protheau_Mercurey_Les_Ormeaux_2016">
@@ -1424,7 +1779,23 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.00</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Raboso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Raboso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rhône_North -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rhône_North">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
+        <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</isInCountry>
     </owl:NamedIndividual>
     
 
@@ -1434,6 +1805,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rhône_South">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#French_Region"/>
         <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</isInCountry>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Riesling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Riesling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
     </owl:NamedIndividual>
     
 
@@ -1450,6 +1829,53 @@
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rondinella -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Rondinella"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Roussanne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Roussanne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Santa_Sofia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Santa_Sofia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Santa_Sofia_Recioto_di_Soave_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Santa_Sofia_Recioto_di_Soave_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Full_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Garganega"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweet"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Veneto"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Santa_Sofia"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cheese"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dessert"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Sofia Recioto di Soave 2013</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">259.90</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2013</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sauvignon_Blanc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sauvignon_Blanc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1550,6 +1976,56 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Venezie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Venezie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Italian_Region"/>
+        <isInCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</isInCountry>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Vincent_Girardin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Vincent_Girardin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Burgund"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Zind-Humbrecht -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Zind-Humbrecht">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Zind-Humbrecht_Clos_Häuserer_Riesling_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Zind-Humbrecht_Clos_Häuserer_Riesling_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Full_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#High_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Riesling"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Alsace"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Zind-Humbrecht"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zind-Humbrecht Clos Häuserer Riesling 2017</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.00</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2017</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Bouchard_Père_&amp;_Fils -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Bouchard_Père_&amp;_Fils">
@@ -1578,7 +2054,59 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">919.8</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2015</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Ca&apos;di_Alte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Ca&apos;di_Alte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
+        <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Prosecco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Ca&apos;di_Alte_Prosecco_Extra_Dry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Ca&apos;di_Alte_Prosecco_Extra_Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Glera"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Prosecco"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Ca&apos;di_Alte"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Aperitif"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ca`di Alte Prosecco Extra Dry</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">149.90</hasPrice>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Reverdy_&amp;_Fils_La_Villaudière_Sauvignon_Blanc_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Reverdy_&amp;_Fils_La_Villaudière_Sauvignon_Blanc_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body"/>
+        <hasFreshness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#High_Freshness"/>
+        <hasGrape rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sauvignon_Blanc"/>
+        <hasSweetness rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry"/>
+        <isFromRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Loire"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Jean-Marie_Reverdy"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+        <pairsWithDish rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+        <hasAcidityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</hasAcidityLevel>
+        <hasAlcoholPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</hasAlcoholPercentage>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reverdy &amp; Fils La Villaudière Sauvignon Blanc 2018</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">134.90</hasPrice>
+        <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</hasVintageYear>
+        <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
     </owl:NamedIndividual>
     
 
@@ -1602,7 +2130,6 @@
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">445.00</hasPrice>
         <hasVintageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2011</hasVintageYear>
         <isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOrganic>
-        <isSparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSparkling>
     </owl:NamedIndividual>
     
 
