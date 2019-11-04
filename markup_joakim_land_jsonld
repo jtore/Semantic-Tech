@@ -1,0 +1,66 @@
+ {"@context": "http://schema.org",
+    {"@type": "ContactPoint",	
+		"telephone": "+18005551234"
+		"email": "kundesenter@vinmonopolet.no"
+		
+		"availableLanguage": [
+		{
+			"@type": "Language",
+			"name": "Norwegian",
+			"alternateName: "no"
+		},
+		
+		{	"@type": "Language",
+			"name": "English",
+			"alternateName: "en"
+		}
+	
+	"openinghours":{
+
+		"@type": "Store",
+		"openinghours:[
+		{
+			"@type: OpeningHoursSpecification",
+			"dayofWeek: "http://schema.org/Monday"
+			"opens": "08:00:00"
+			"closes": "18:00"
+		},
+		{
+			"@type: OpeningHoursSpecification",
+				"dayofWeek: "http://schema.org/Tuesday"
+				"opens": "08:00:00"
+				"closes": "18:00"
+		},
+		
+		{
+			"@type: OpeningHoursSpecification",
+			"dayofWeek: "http://schema.org/Wednesday"
+			"opens": "09:00:00"
+			"closes": "18:00"
+		},
+		
+		{
+		
+			"@type: OpeningHoursSpecification",
+				"dayofWeek: "http://schema.org/Thursday"
+				"opens": "08:00:00"
+				"closes": "18:00"
+		},
+		
+		{
+			"@type: OpeningHoursSpecification",
+			"dayofWeek: "http://schema.org/Friday"
+			"opens": "08:00:00"
+			"closes": "18:00"
+			
+		},
+		
+		{
+			"@type: OpeningHoursSpecification",
+			"dayofWeek: "http://schema.org/Saturday"
+			"opens": "09:00:00"
+			"closes": "15:00"
+			}]
+		}
+	}
+		
