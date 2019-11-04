@@ -1,0 +1,10 @@
+<script type = "application/ld+json">
+{ "context":http://schema.org
+   "type:Place"
+     { "type:Country"
+      "name":"Frankrike"
+      "url":"https://www.vinmonopolet.no/Land/Frankrike/c/frankrike"
+          }
+    {"type:AdministativeArea"
+    "name: ..."}
+}
