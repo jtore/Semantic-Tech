@@ -1,22 +1,50 @@
 <script type = "application/ld+json">
-{ "context":http://schema.org
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "Vinmonopolet",
+    "url": "http://vinmonopolet.no"
+    "about":
+    "contact": {
+        "type": "ContactPoint"
+        "email": "kundesenter@vinmonopolet.no"
+        "telephone": "" 
+        "openingHours": "Mo,Tu,Th,Fr 08:00-18:00", "We 09:00-18:00", 
+                        "Sa 09:00-15:00"
+
+    }
+
+    "type:Webpage"
+    "name": "Frankrike | Land |  "
+    "url": "https://www.vinmonopolet.no/Land/Frankrike/c/frankrike"
+    "description:" ""
+   
    "type:Place"
      { "type:Country"
       "name":"Frankrike"
       "url":"https://www.vinmonopolet.no/Land/Frankrike/c/frankrike"
-          }
-    {"type:AdministativeArea"
-    "name: ..."}
-
-    #instans (distrikt)
-    #instans (distrikt)
-    #instans (distrikt)
-    #instans (distrikt)
-
-} # nested i type:Webpage/Organization?
-    # Contact:
-    #Phone: 
-    #Openinghours:
+      "districts": {
+    "type:AdministativeArea"
+    "name: Burgund"
+    ""}
+     {"type:AdministativeArea"
+    "name: Bordeaux"}
+     {"type:AdministativeArea"
+    "name: Champagne"}
+     {"type:AdministativeArea"
+    "name: Loire"}
+     {"type:AdministativeArea"
+    "name: Languedoc-Roussillon"}
+         {"type:AdministativeArea"
+    "name: Rhône Sud"}
+             {"type:AdministativeArea"
+    "name: Rhône Nord"}
+             {"type:AdministativeArea"
+    "name: Rhône Sud"}
+    # etc
+     }
+ }
+} 
 
 
 
