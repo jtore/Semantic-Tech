@@ -1,0 +1,43 @@
+<script type="application/ld+json">
+	{
+	 "@context" : {
+                "tst":"http://schema.org/",
+                "vin":"INFO116_wine_ontology.owl"
+                },
+                
+		"@type" : "vin:Rødvin",
+		"tst:logo": "https://bilder.vinmonopolet.no/cache/300x300-0/5909601-1.jpg",
+                "tst:url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Bouchard-P%C3%A8re-%26-Fils-Le-Corton-2015/p/5909601",
+                "tst:name": "Bouchard Père & Fils Le Corton",
+                "tst:description": "Rik og kompleks smak med en god struktur. Fyldig og frisk.",
+                "tst:productID": "5909601",
+                "vin:price": "Kr. 919,80 75 Cl Kr. 1226,40 pr. liter",
+		"vin:volume": "75 Cl",
+                "vin:color": "Rød",
+                "vin:varetype": "Rødvin",
+                "vin:smak": "Rik og kompleks smak med en god struktur. Fyldig og frisk",
+                "vin:lukt": "Intens duft av plommer, solbær, svisker og krydder",
+		"vin:farge": "Rubinrød farge og noe lys kant",
+		"vin:årgang": "2015",
+		"vin:råstoff": "Pinot Noir"
+		}
+		
+		"vin:isDistilledBy": {
+		"@type: "vin:produsent",
+		"tst:name": "Bouchard Père & Fils"},
+
+
+		"vin:fromCountry": {
+		"@type":"vin:Country",
+		"tst:name": "Frankrike",
+		"url":"https://www.vinmonopolet.no/Land/Frankrike/c/frankrike"},
+		
+
+		"vin:fromRegion": {
+		"@type":"vin:Region",
+		"tst:name": "Distrikt Burgund, Aloxe-Corton"},
+
+                
+                
+	}
+</script>
