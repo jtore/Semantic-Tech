@@ -82,7 +82,7 @@
                     {"type": "AdministrativeArea", 
                         "name": "Korsika",
                         "url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Korsika/c/frankrike_korsika"}] }, 
-   "author":{
+   "sch:author":{
    		"@type": "Organization", 
             "name": "Vinmonopolet", 
             "url": "http://vinmonopolet.no",  
