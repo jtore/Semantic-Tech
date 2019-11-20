@@ -3,10 +3,8 @@
 	 "@context" : {
                 "tst":"http://schema.org/",
                 "vin":"https://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9/?fbclid=IwAR2neKmnyigHAbHrIv5geJoMXg6jJwSAlwNRpJ_dcc7zgF-UTOXeyS-ZqyA"
-                },
-        
-                "tst:mainEntity": {        
-		        "@type" : "vin:Red_Wine",
+                },     
+		        "@type": "vin:Red_Wine",
 		        "tst:image": "https://bilder.vinmonopolet.no/cache/300x300-0/5909601-1.jpg",
                 "tst:url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Bouchard-P%C3%A8re-%26-Fils-Le-Corton-2015/p/5909601",
                 "tst:description": ["Rik og kompleks smak med en god struktur, Fyldig og frisk, Intens duft av plommer, solbær, svisker og krydder"],
@@ -19,36 +17,22 @@
 		        "vin:hasVintageYear": "2015",
 		        "vin:hasGrape": "Pinot_Noir",
                 "vin:isOrganic": "false",
-                "vin:pairsWithDish": ["Poultry, Cattle, Small_Game"]
-                },
-		
+                "vin:pairsWithDish": ["Poultry, Cattle, Small_Game"],
 		        "vin:isProducedBy": {
                 "@type": "tst:Brand",
                 "tst:name": "Bouchard Père & Fils"},
-
-
                 "vin:isInCountry": {
-                "@type": "tst:Country",
-                "tst:name": "Frankrike",
-                "url":"https://www.vinmonopolet.no/Land/Frankrike/c/frankrike"},
-
-
+                "@type": "vin:Country",
+                "vin:name": "France"},
                 "vin:isWineFromRegion": {
-                "@type":"tst:Region",
-                "tst:name": "Distrikt Burgund"},
-
+                "@type":"vin:Region",
+                "vin:name": "Burgund"},
                 "vin:hasWineProfile": { 
                 "@type":"vin:Red_Wine",
                 "vin:hasBody": "Full_body",
                 "vin:hasFreshness": "High_Freshness",
                 "vin:hasStorageExtent": "Can_Store",
-                "vin:hasTannines": "Moderate_Tannine_Level"}, 
+                "vin:hasTannines": "Moderate_Tannine_Level" }
         
-                 
-    }
+        }
 </script>
- 
-
-
-
-
