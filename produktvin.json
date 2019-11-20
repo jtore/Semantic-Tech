@@ -1,0 +1,55 @@
+<script type="application/ld+json">
+	{
+	 "@context" : {
+                "tst":"http://schema.org/",
+                "vin":"INFO116_wine_ontology.owl"
+                },
+        
+                "tst:mainEntity": {        
+		        "@type" : "vin:Red_Wine",
+		        "tst:image": "https://bilder.vinmonopolet.no/cache/300x300-0/5909601-1.jpg",
+                "tst:url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Bouchard-P%C3%A8re-%26-Fils-Le-Corton-2015/p/5909601",
+                "tst:description": "Rik og kompleks smak med en god struktur. Fyldig og frisk.",
+                "tst:productID": "5909601",
+                "vin:hasName": "Bouchard Père & Fils Le Corton",
+                "vin:hasPrice": "Kr. 919,80 75 Cl",
+                "vin:color": "Rubinrød farge og noe lys kant",
+                "vin:varetype": "Rødvin",
+                "vin:hasAlcoholPercentage": "13.5%",
+                "vin:smak": "Rik og kompleks smak med en god struktur. Fyldig og frisk",
+                "vin:lukt": "Intens duft av plommer, solbær, svisker og krydder",
+		        "vin:hasAcidityLevel": "5,1 g/l",
+		        "vin:hasVintageYear": "2015",
+		        "vin:hasGrape": "Pinot_Noir",
+                "vin:isOrganic": "false",
+                "vin:pairsWithDish": ["Poultry, Cattle, Small_Game"]
+                },
+		
+		"vin:isProducedBy": {
+                "@type": "vin:Brand",
+                        "tst:name": "Bouchard Père & Fils"},
+
+
+                "vin:IsInCountry": {
+                "@type": "vin:Country",
+                "tst:name": "Frankrike",
+                "url":"https://www.vinmonopolet.no/Land/Frankrike/c/frankrike"},
+
+
+                "vin:isWineFromRegion": {
+                "@type":"vin:Region",
+                "tst:name": "Distrikt Burgund"},
+
+                "vin:hasWineProfile": { 
+                "@type":"vin:Red_Wine",
+                "vin:hasBody": "Full_body",
+                "vin:hasFreshness": "High_Freshness",
+                "vin:hasStorageExtent": "Can_Store",
+                "vin:hasTannines": "Moderate_Tannine_Level"},         
+        }
+</script>
+ 
+
+
+HA MED ITEM AVALIABILITY 
+BRAND ISTEDENFOR PROUDUSENT
