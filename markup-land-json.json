@@ -84,10 +84,9 @@
 					"name": "Korsika",
                     "url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Korsika/c/frankrike_korsika"}] },, 
    "sch:author":{
-   		"@type": "sch:Store", 
+   		"@type": "sch:Organization", 
 		"sch:name": "Vinmonopolet", 
-		"sch:url": "http://vinmonopolet.no", 
-		"sch:currenciesAccepted": "NOK",  
+		"sch:url": "http://vinmonopolet.no",  
 		"sch:contactPoint": 
 			{"@type": "sch:ContactPoint",	 
 			"sch:telephone": "+18005551234", 
