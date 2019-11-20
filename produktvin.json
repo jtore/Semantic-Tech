@@ -7,7 +7,7 @@
 		        "@type": "vin:Red_Wine",
 		        "tst:image": "https://bilder.vinmonopolet.no/cache/300x300-0/5909601-1.jpg",
                 "tst:url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Bouchard-P%C3%A8re-%26-Fils-Le-Corton-2015/p/5909601",
-                "tst:description": ["Rik og kompleks smak med en god struktur, Fyldig og frisk, Intens duft av plommer, solbær, svisker og krydder"],
+                "tst:description": ["Rik og kompleks smak med en god struktur", "Fyldig og frisk", "Intens duft av plommer, solbær, svisker og krydder"],
                 "tst:productID": "5909601",
                 "tst:color": "Rubinrød farge og noe lys kant",
                 "vin:hasName": "Bouchard Père & Fils Le Corton",
