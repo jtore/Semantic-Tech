@@ -82,7 +82,7 @@
                     "url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Normandie/c/frankrike_normandie"},
                  {"type": "AdministrativeArea", 
 					"name": "Korsika",
-                    "url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Korsika/c/frankrike_korsika"}] },, 
+                    "url": "https://www.vinmonopolet.no/vmp/Land/Frankrike/Korsika/c/frankrike_korsika"}] }, 
    "sch:author":{
    		"@type": "sch:Organization", 
 		"sch:name": "Vinmonopolet", 
