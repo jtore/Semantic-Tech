@@ -23,11 +23,11 @@
 		        "vin:hasGrape": "Pinot_Noir",
                 "vin:isOrganic": "false",
                 "vin:pairsWithDish": ["Poultry, Cattle, Small_Game"]
-                }
+                },
 		
-		        "vin:isProducedBy": {
+		"vin:isProducedBy": {
                 "@type": "vin:Brand",
-                "tst:name": "Bouchard Père & Fils"},
+                        "tst:name": "Bouchard Père & Fils"},
 
 
                 "vin:IsInCountry": {
@@ -45,9 +45,7 @@
                 "vin:hasBody": "Full_body",
                 "vin:hasFreshness": "High_Freshness",
                 "vin:hasStorageExtent": "Can_Store",
-                "vin:hasTannines": "Moderate_Tannine_Level"}, 
-        
-                 
+                "vin:hasTannines": "Moderate_Tannine_Level"},         
         }
 </script>
  
