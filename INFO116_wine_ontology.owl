@@ -144,6 +144,7 @@
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isLocatedInRegion -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isLocatedInRegion">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isRegionOfWinery"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Region"/>
     </owl:ObjectProperty>
@@ -165,6 +166,12 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isRegionOfWine">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isWineFromRegion"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isRegionOfWinery -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isRegionOfWinery"/>
     
 
 
@@ -374,6 +381,24 @@
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Aperitif"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Big_Game"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cattle"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cheese"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dessert"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Fish"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Lamb"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Pork"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Shellfish"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Small_Game"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Vegetables"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Entity"/>
     </owl:Class>
     
@@ -512,6 +537,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#White_Wine"/>
+        <rdfs:label>Red Wine</rdfs:label>
     </owl:Class>
     
 
@@ -572,6 +598,7 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label>Sparkling Wine</rdfs:label>
     </owl:Class>
     
 
@@ -644,6 +671,7 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label>White Wine</rdfs:label>
     </owl:Class>
     
 
@@ -656,6 +684,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#pairsWithDish"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasGrape"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -757,6 +791,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isLocatedInRegion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -849,6 +890,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Azul_y_Garanza">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
         <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Navarra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Beef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Beef">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cattle"/>
     </owl:NamedIndividual>
     
 
@@ -957,6 +1006,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Can_Store">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Storage_Extent"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Can Store</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1207,6 +1257,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dry">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dry</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1329,6 +1380,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Full_Body">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Body"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full Body</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1467,6 +1519,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#High_Freshness">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Freshness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High Freshness</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1475,6 +1528,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#High_Tannine_Level">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Tannines"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High Tannin Level</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1617,6 +1671,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Light_Body">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Body"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light Body</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1634,6 +1689,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Low_Freshness">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Freshness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low Freshness</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1642,6 +1698,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Low_Tannine_Level">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Tannines"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low Tannin Level</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1798,6 +1855,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Body">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Body"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Body</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1806,6 +1864,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Medium_Freshness">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Freshness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Freshness</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1830,6 +1889,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Moderate_Tannine_Level">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Tannines"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate Tannin Level</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1938,6 +1998,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#No_Storage">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Storage_Extent"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Storage</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2166,6 +2227,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Semi">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semi</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2190,6 +2252,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Should_Store">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Storage_Extent"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Should Store</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2214,6 +2277,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweet">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Sweetness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet</rdfs:label>
     </owl:NamedIndividual>
     
 
