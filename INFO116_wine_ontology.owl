@@ -689,6 +689,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasGrape"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#hasGrape"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
             </owl:Restriction>
@@ -785,6 +791,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#isLocatedInRegion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -877,6 +890,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Azul_y_Garanza">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Winery"/>
         <isLocatedInRegion rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Navarra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Beef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Beef">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cattle"/>
     </owl:NamedIndividual>
     
 
