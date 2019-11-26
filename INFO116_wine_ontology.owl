@@ -1002,6 +1002,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Camembert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Camembert">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cheese"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Can_Store -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Can_Store">
@@ -1133,6 +1141,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Cheese">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Chicken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Chicken">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry"/>
     </owl:NamedIndividual>
     
 
@@ -2091,6 +2107,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Poultry">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Dish"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Turkey"/>
     </owl:NamedIndividual>
     
 
@@ -2340,6 +2357,12 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Trincadeira">
         <rdf:type rdf:resource="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Grape"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Turkey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vilde/ontologies/2019/9/untitled-ontology-9#Turkey"/>
     
 
 
