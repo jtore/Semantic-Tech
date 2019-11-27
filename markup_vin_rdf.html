@@ -9,8 +9,8 @@
     <div class="product__hgroup" typeof = "wine:Red_Wine">
         <h4 class="product__property-name">Rødvin</h4><h4></h4>
         <h1 property = "wine:hasName"><span property = "wine:isProducedBy">Bouchard Père &amp; Fils </span> Le Corton <span property = "wine:hasVintageYear">2015</span></h1>
-        <p class="product__region" vocab = "http://schema.org" prefix = "sch:http://schema.org/">
-            <a href="/Land/Frankrike/c/frankrike" typeof = "sch:Country"><span property = "sch:name">Frankrike</span></a>
+        <p class="product__region" vocab = "http://schema.org">
+            <a href="/Land/Frankrike/c/frankrike" typeof = "Country"><span property = "name">Frankrike</span></a>
             <a href="/Land/Frankrike/Burgund/c/frankrike_burgund" typeof = wine:Red_Wine><span property = "wine:isFromRegion">Burgund</span></a>
             <a href="/Land/Frankrike/Burgund/Aloxe-Corton/c/frankrike_burgund_aloxe-corton">Aloxe-Corton</a>
         </p>
@@ -25,8 +25,8 @@
             <div class="product__price-and-buy__inner-container clearfix">
                 <p class="product__price-and-buy__price-wrapper">
                     <span class="product__price" property = "wine: hasPrice">Kr. 919,80</span>
-                    <span class="product__cost_per_unit" vocab = "http://schema.org" prefix = "sch:http://schema.org/"  typeof = "sch:Quantity" >
-                        <span class="product__amount" property = "sch:description">75 Cl</span>
+                    <span class="product__cost_per_unit" vocab = "http://schema.org"   typeof = "Quantity" >
+                        <span class="product__amount" property = "description">75 Cl</span>
                         <span> Kr. 1&nbsp;226,40 pr. liter</span>
                     </span>
                 </p>
@@ -55,7 +55,7 @@
         <!--Offer-->    
         <div class="product-stock-status clearfix">
             <div class="product-shopinstore">
-                <div vocab = "http://schema.org/" prefix = "sch:http://schema.org/" typeof = "sch:Offer" class="product-ordertostore">
+                <div vocab = "http://schema.org/"  typeof = "Offer" class="product-ordertostore">
                     <span class="icon-stock icon-in-store-available"></span>
                     <span property = "description">Kan kjøpes i butikk med varen på lager</span><span class="grey-text"></span>
                 </div>
@@ -182,26 +182,26 @@
         <div class="js-accordion__panel accordion__panel" aria-labelledby="accordion1_tab1" role="tabpanel" id="accordion1_panel1" aria-hidden="false"><h2 class="sr-only accordion__title" data-accordion-opened="true" tabindex="0">
             <!--About-section-->
             <h2>Om produktet</h2>
-            <ul typeof = "wine: Wine" vocab = "http://schema.org/" prefix = "sch:http://schema.org/" class="product__tab-list" >
+            <ul typeof = "wine: Wine" vocab = "http://schema.org/"  class="product__tab-list" >
                 <li>
                     <span class="product__tab-list__label">Varetype</span>
                     <span class="product__tab-list__value" property = "wine:Red_Wine">Rødvin</span>
                 </li>
-                <li typeof = "sch:Thing">
+                <li typeof = "Thing">
                     <span class="product__tab-list__label" >Varenummer</span>
-                    <span class="product__tab-list__value" property = "sch:identifier">5909601</span>
+                    <span class="product__tab-list__value" property = "identifier">5909601</span>
                 </li>
-                <li typeof = "sch:Thing">
+                <li typeof = "Thing">
                     <span class="product__tab-list__label">Smak</span>
                     <span class="product__tab-list__value">Rik, kompleks smak med god struktur. Fyldig og frisk.</span>
                 </li>
-                <li typeof = "sch:Thing">
+                <li typeof = "Thing">
                     <span class="product__tab-list__label">Lukt</span>
-                    <span class="product__tab-list__value" property = "sch:description">Intens duft av plommer, solbær, svisker og krydder.</span>
+                    <span class="product__tab-list__value" property = "description">Intens duft av plommer, solbær, svisker og krydder.</span>
                 </li>
-                <li typeof = "sch:Thing">
+                <li typeof = "Thing">
                     <span class="product__tab-list__label">Farge</span>
-                    <span class="product__tab-list__value" property = "sch:description">Rubinrød farge, noe lys kant.</span>
+                    <span class="product__tab-list__value" property = "description">Rubinrød farge, noe lys kant.</span>
                 </li>
                 
                 <li>
@@ -224,8 +224,8 @@
                 </li>
             </ul>
             
-            <div class="product__map"  vocab = "http://schema.org" prefix = "sch:http://schema.org/" typeof = "svh:Place">
-                <div id="product__map"><div id="product__map-inner"><a property = sch:hasMap href="https://www.google.no/maps/search/Frankrike,Burgund,Aloxe-Corton" title="Kart over Frankrike, Aloxe-Corton" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?center=Frankrike%2CBurgund%2CAloxe-Corton&amp;zoom=8&amp;size=640x300&amp;scale=1&amp;format=png&amp;maptype=roadmap&amp;client=gme-vinmono&amp;signature=Aw8dbNvKXa9dJK1ViQ4refQ0ABA=" data-src="https://maps.googleapis.com/maps/api/staticmap?center=Frankrike%2CBurgund%2CAloxe-Corton&amp;zoom=8&amp;size=640x300&amp;scale=1&amp;format=png&amp;maptype=roadmap&amp;client=gme-vinmono&amp;signature=Aw8dbNvKXa9dJK1ViQ4refQ0ABA=" id="staticProductMap" alt="Frankrike, Aloxe-Corton"></a></div></div>
+            <div class="product__map"  vocab = "http://schema.org"  typeof = "Place">
+                <div id="product__map"><div id="product__map-inner"><a property = hasMap href="https://www.google.no/maps/search/Frankrike,Burgund,Aloxe-Corton" title="Kart over Frankrike, Aloxe-Corton" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?center=Frankrike%2CBurgund%2CAloxe-Corton&amp;zoom=8&amp;size=640x300&amp;scale=1&amp;format=png&amp;maptype=roadmap&amp;client=gme-vinmono&amp;signature=Aw8dbNvKXa9dJK1ViQ4refQ0ABA=" data-src="https://maps.googleapis.com/maps/api/staticmap?center=Frankrike%2CBurgund%2CAloxe-Corton&amp;zoom=8&amp;size=640x300&amp;scale=1&amp;format=png&amp;maptype=roadmap&amp;client=gme-vinmono&amp;signature=Aw8dbNvKXa9dJK1ViQ4refQ0ABA=" id="staticProductMap" alt="Frankrike, Aloxe-Corton"></a></div></div>
             </div>
             
             <ul class="link-list link-list--with-separators">
