@@ -2,7 +2,7 @@
 	{
 	 "@context" : {
                 "tst":"http://schema.org/",
-                "vin":"http://www.semanticweb.org/name/ontologies/2019/9/untitled-ontology-9"
+                "vin":"http://www.semanticweb.org/name/ontologies/2019/9/untitled-ontology-9#"
                 },     
 		        "@type": "vin:Red_Wine",
 		        "tst:image": "https://bilder.vinmonopolet.no/cache/300x300-0/5909601-1.jpg",
